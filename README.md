@@ -14,9 +14,16 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Conten
 
 
 4.start
-cd /Users/idavidov/nWIP/spark/tmo/spark-3.0.0-bin-hadoop3.2
+cd /Users/idavidov/nWIP/spark/tmo/spark-3.0.0-bin-hadoop3.2 \n
 ./sbin/start-master.sh
 ./sbin/start-slave.sh spark://mac-idavidov:7077
 
 available now @
 http://localhost:8080
+
+
+# Load trainsched.txt
+df = spark.read.csv("trainsched.txt", header=True)
+
+# Create temporary table called table1
+df.createOrReplaceTempView("table1")
