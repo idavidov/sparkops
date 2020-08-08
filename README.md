@@ -27,3 +27,5 @@ df = spark.read.csv("trainsched.txt", header=True)
 
 # Create temporary table called table1
 df.createOrReplaceTempView("table1")
+
+spark.sql("DESCRIBE table1").show()
