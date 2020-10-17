@@ -25,6 +25,13 @@ available now @
 http://localhost:8080
 
 
+1. textFile = spark.read.text("LSF1.csv")
+2. textFile.count()
+3. textFile.filter(textFile.value.contains("dvcmida")).count()
+
+
+
+
 # Load trainsched.txt
 df = spark.read.csv("trainsched.txt", header=True)
 
